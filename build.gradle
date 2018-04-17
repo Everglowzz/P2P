@@ -1,0 +1,24 @@
+apply from: "config.gradle" //这里表示引用config.gradle文件
+buildscript {
+    repositories {
+        jcenter()
+        google()
+    }
+    dependencies {
+        //classpath 'com.android.tools.build:gradle:2.3.3'//Android Studio v2.3.3
+        classpath 'com.android.tools.build:gradle:3.0.0' //Android Studio v3.0
+    }
+}
+
+allprojects {
+    repositories {
+        jcenter()
+        maven { url "https://jitpack.io" }//RxCache 需要 jitpack 仓库
+        maven { url "https://maven.google.com" }//Support-library 需要 Google 仓库
+        google() //AndroidStudio v3.0 可以使用 google() 替代 maven { url "https://maven.google.com" }
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}

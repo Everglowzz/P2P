@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+    <declare-styleable name="GroupViewItem">
+        <attr name="leftImage" format="integer"/>
+        <attr name="title" format="string"/>
+        <attr name="rightImage" format="integer"/>
+        <attr name="itemHeight" format="dimension"/>
+        <attr name="isShowLeft" format="boolean"/>
+        <attr name="isShowRight" format="boolean"/>
+    </declare-styleable>
+</resources>

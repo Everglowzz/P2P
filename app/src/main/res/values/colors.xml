@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#5c8af5</color>
+    <color name="colorPrimaryDark">#5c8af5</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="main_bg">#edf4ff</color>
+    <color name="main_gray">#9da4a7</color>
+    <color name="text_gray">#949494</color>
+    <color name="main_black">#272e3b</color>
+    <color name="main_while">#ffffff</color>
+    
+    <dimen name="margin_20">20px</dimen>
+
+    <color name="cardShadowColor_1">#cbdeff</color>
+    <color name="cardShadowColor_2">#b7def4</color>
+    <color name="cardShadowColor_3">#5bbcf9</color>
+    <color name="cardShadowColor_4">#5c8af5</color>
+    <dimen name="cardPadding1">0.2px</dimen>
+    <dimen name="cardPadding2">0.5px</dimen>
+    <dimen name="cardPadding3">0.9px</dimen>
+    <dimen name="cardPadding4">1.4px</dimen>
+    <dimen name="cardPadding5">2px</dimen>
+    <dimen name="cardRadius">10dp</dimen>
+
+
+</resources>

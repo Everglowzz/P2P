@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">P2P</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+
+
+
+    <string name="title_home">首页</string>
+    <string name="title_projects">项目</string>
+    <string name="title_discover">发现</string>
+    <string name="title_mine">我的</string>
+</resources>

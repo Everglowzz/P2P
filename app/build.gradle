@@ -1,0 +1,64 @@
+apply plugin: 'com.android.application'
+buildscript {
+    repositories {
+        jcenter()
+    }
+}
+
+android {
+    compileSdkVersion rootProject.ext.android["compileSdkVersion"]
+    buildToolsVersion rootProject.ext.android["buildToolsVersion"]
+    useLibrary 'org.apache.http.legacy'
+
+    compileOptions {
+        targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility JavaVersion.VERSION_1_8
+    }
+    
+    defaultConfig {
+        minSdkVersion rootProject.ext.android["minSdkVersion"]
+        targetSdkVersion rootProject.ext.android["targetSdkVersion"]
+        versionCode rootProject.ext.android["versionCode"]
+        versionName rootProject.ext.android["versionName"]
+    }
+    buildTypes {
+        debug {
+            buildConfigField "boolean", "LOG_DEBUG", "true"
+            buildConfigField "boolean", "USE_CANARY", "true"
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+
+        release {
+            buildConfigField "boolean", "LOG_DEBUG", "false"
+            buildConfigField "boolean", "USE_CANARY", "false"
+            minifyEnabled true
+            shrinkResources true
+            zipAlignEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    
+}
+
+dependencies {
+    compile 'me.jessyan:arms:2.4.1'
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    testCompile rootProject.ext.dependencies["junit"]
+    compile rootProject.ext.dependencies["support-v4"]
+    compile rootProject.ext.dependencies["gson"]
+    compile rootProject.ext.dependencies["appcompat-v7"]
+    compile rootProject.ext.dependencies["cardview-v7"]
+    compile rootProject.ext.dependencies["autolayout"]
+    compile rootProject.ext.dependencies["butterknife"]
+    compile rootProject.ext.dependencies["androideventbus"]    
+    compile rootProject.ext.dependencies["rxlifecycle2-components"]
+    
+    compile 'com.roughike:bottom-bar:2.3.1' //底部导航
+    annotationProcessor rootProject.ext.dependencies["butterknife-compiler"] //Butterknife 插件,很多人因为没加这个而报错,切记!!!
+    annotationProcessor rootProject.ext.dependencies["dagger2-compiler"]//依赖插件, annotationProcessor 是 AndroidStudio 自带并用来替换 APT
+    implementation rootProject.ext.dependencies["progressmanager"]
+    implementation rootProject.ext.dependencies["retrofit-url-manager"]
+    implementation 'de.hdodenhof:circleimageview:2.2.0'
+}

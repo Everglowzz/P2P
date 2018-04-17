@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                     android:layout_width="match_parent"
+                                     android:layout_height="match_parent"
+                                     android:background="@color/main_bg"
+                                     android:orientation="vertical"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_20"
+        android:background="@drawable/shape_white_8r"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="175px"
+            android:orientation="horizontal"
+            >
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <TextView
+                    style="@style/text_norm_black"
+                    android:layout_centerInParent="true"
+                    android:drawablePadding="15px"
+                    android:drawableTop="@mipmap/ic_friends"
+                    android:text="每日任务"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <TextView
+                    style="@style/text_norm_black"
+                    android:layout_centerInParent="true"
+                    android:drawablePadding="15px"
+                    android:drawableTop="@mipmap/ic_friends"
+                    android:text="邀请有礼"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <TextView
+                    style="@style/text_norm_black"
+                    android:layout_centerInParent="true"
+                    android:drawablePadding="15px"
+                    android:drawableTop="@mipmap/ic_friends"
+                    android:text="体验金"/>
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="175px"
+            android:orientation="horizontal"
+            >
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <TextView
+                    style="@style/text_norm_black"
+                    android:layout_centerInParent="true"
+                    android:drawablePadding="15px"
+                    android:drawableTop="@mipmap/ic_friends"
+                    android:text="会员特权"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <TextView
+                    style="@style/text_norm_black"
+                    android:layout_centerInParent="true"
+                    android:drawablePadding="15px"
+                    android:drawableTop="@mipmap/ic_friends"
+                    android:text="大转盘"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <TextView
+                    style="@style/text_norm_black"
+                    android:layout_centerInParent="true"
+                    android:drawablePadding="15px"
+                    android:drawableTop="@mipmap/ic_friends"
+                    android:text="联系客服"/>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="230px"
+        android:src="@mipmap/discovers_ad"
+        android:background="@drawable/shape_white_8r"
+        android:layout_marginLeft="@dimen/margin_20"
+        android:layout_marginRight="@dimen/margin_20"/>
+
+</com.zhy.autolayout.AutoLinearLayout>

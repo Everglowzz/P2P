@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<tabs>
+    <tab
+        id="@+id/tab_home"
+        icon="@drawable/ic_home_black_24dp"
+        title="@string/title_home" />
+    <tab
+        id="@+id/tab_projects"
+        icon="@drawable/ic_dashboard_black_24dp"
+        title="@string/title_projects" />
+
+    <tab
+        id="@+id/tab_discover"
+        icon="@mipmap/ic_friends"
+        title="@string/title_discover" />
+    <tab
+        id="@+id/tab_mine"
+        icon="@mipmap/ic_friends"
+        title="@string/title_mine" />
+
+</tabs>

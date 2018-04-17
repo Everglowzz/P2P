@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:id="@+id/layout_root"
+                android:layout_width="fill_parent"
+                android:layout_height="85px"
+    >
+
+    <ImageView
+        android:id="@+id/iv_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="@dimen/margin_20"
+        tools:src="@mipmap/ic_friends"
+        />
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="@dimen/margin_20"
+        android:layout_toRightOf="@+id/iv_left"
+        android:ellipsize="end"
+        android:gravity="center_vertical"
+        android:maxEms="8"
+        android:singleLine="true"
+        android:textColor="@color/main_black"
+        tools:text="资金性情"
+        android:textStyle="bold"
+        />
+    <TextView
+        android:id="@+id/tv_right_text"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:textColor="@color/main_gray"
+        android:layout_toLeftOf="@+id/iv_right"
+        android:ellipsize="end"
+        android:gravity="center_vertical"
+        android:maxEms="8"
+        android:textSize="14sp"
+        android:singleLine="true"
+        android:layout_marginRight="@dimen/margin_20"
+        />
+
+    <ImageView
+        android:id="@+id/iv_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:paddingRight="@dimen/margin_20"
+        tools:src="@mipmap/ic_friends"
+        />
+</com.zhy.autolayout.AutoRelativeLayout>
