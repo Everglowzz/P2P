@@ -1,127 +1,202 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.zhy.autolayout.AutoLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                                     android:layout_width="match_parent"
-                                     android:layout_height="match_parent"
-                                     android:background="@color/main_bg"
-                                     android:orientation="vertical"
-    >
 
-    <LinearLayout
+<com.jess.arms.widget.autolayout.AutoScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.zhy.autolayout.AutoLinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="@dimen/margin_20"
-        android:background="@drawable/shape_white_8r"
-        android:orientation="vertical">
+        android:layout_height="match_parent"
+        android:background="@color/main_bg"
+        android:orientation="vertical"
+        >
+
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="175px"
-            android:orientation="horizontal"
-            >
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_20"
+            android:background="@drawable/shape_white_8r"
+            android:orientation="vertical">
 
-            <RelativeLayout
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="175px"
+                android:orientation="horizontal"
+                >
 
-                <TextView
-                    style="@style/text_norm_black"
-                    android:layout_centerInParent="true"
-                    android:drawablePadding="15px"
-                    android:drawableTop="@mipmap/ic_friends"
-                    android:text="每日任务"/>
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
 
-            </RelativeLayout>
+                    <TextView
+                        style="@style/text_norm_black"
+                        android:layout_centerInParent="true"
+                        android:drawablePadding="15px"
+                        android:drawableTop="@mipmap/ic_friends"
+                        android:text="每日任务"/>
 
-            <RelativeLayout
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1">
+                </RelativeLayout>
 
-                <TextView
-                    style="@style/text_norm_black"
-                    android:layout_centerInParent="true"
-                    android:drawablePadding="15px"
-                    android:drawableTop="@mipmap/ic_friends"
-                    android:text="邀请有礼"/>
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
 
-            </RelativeLayout>
+                    <TextView
+                        style="@style/text_norm_black"
+                        android:layout_centerInParent="true"
+                        android:drawablePadding="15px"
+                        android:drawableTop="@mipmap/ic_friends"
+                        android:text="邀请有礼"/>
 
-            <RelativeLayout
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1">
+                </RelativeLayout>
 
-                <TextView
-                    style="@style/text_norm_black"
-                    android:layout_centerInParent="true"
-                    android:drawablePadding="15px"
-                    android:drawableTop="@mipmap/ic_friends"
-                    android:text="体验金"/>
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
 
-            </RelativeLayout>
+                    <TextView
+                        style="@style/text_norm_black"
+                        android:layout_centerInParent="true"
+                        android:drawablePadding="15px"
+                        android:drawableTop="@mipmap/ic_friends"
+                        android:text="体验金"/>
 
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="175px"
+                android:orientation="horizontal"
+                >
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <TextView
+                        style="@style/text_norm_black"
+                        android:layout_centerInParent="true"
+                        android:drawablePadding="15px"
+                        android:drawableTop="@mipmap/ic_friends"
+                        android:text="会员特权"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <TextView
+                        style="@style/text_norm_black"
+                        android:layout_centerInParent="true"
+                        android:drawablePadding="15px"
+                        android:drawableTop="@mipmap/ic_friends"
+                        android:text="大转盘"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <TextView
+                        style="@style/text_norm_black"
+                        android:layout_centerInParent="true"
+                        android:drawablePadding="15px"
+                        android:drawableTop="@mipmap/ic_friends"
+                        android:text="联系客服"/>
+
+                </RelativeLayout>
+
+            </LinearLayout>
 
         </LinearLayout>
 
-        <LinearLayout
+        <ImageView
             android:layout_width="match_parent"
-            android:layout_height="175px"
-            android:orientation="horizontal"
-            >
+            android:layout_height="230px"
+            android:layout_marginLeft="@dimen/margin_20"
+            android:layout_marginRight="@dimen/margin_20"
+            android:background="@drawable/shape_white_8r"
+            android:src="@mipmap/discovers_ad"
+            tools:visibility="gone"/>
 
-            <RelativeLayout
-                android:layout_width="0dp"
+        <com.zhy.autolayout.AutoLinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="495px"
+            android:layout_margin="@dimen/margin_20"
+            android:background="@drawable/shape_white_8r"
+            android:orientation="vertical"
+            tools:visibility="gone">
+
+            <TextView
+                style="@style/text_big_black"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_20"
+                android:text="积分商场"/>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_integral"
+                android:layout_width="match_parent"
+                android:layout_height="330px"
+                android:layout_marginTop="@dimen/margin_20"/>
+
+            <TextView
+                android:id="@+id/tv_integral_more"
+                style="@style/text_norm_gray"
+                android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_weight="1">
+                android:gravity="center"
+                android:text="查看更多>"
+                />
+        </com.zhy.autolayout.AutoLinearLayout>
 
-                <TextView
-                    style="@style/text_norm_black"
-                    android:layout_centerInParent="true"
-                    android:drawablePadding="15px"
-                    android:drawableTop="@mipmap/ic_friends"
-                    android:text="会员特权"/>
+        <com.zhy.autolayout.AutoLinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="526px"
+            android:layout_margin="@dimen/margin_20"
+            android:background="@drawable/shape_white_8r"
+            android:orientation="vertical">
 
-            </RelativeLayout>
+            <TextView
+                style="@style/text_big_black"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_20"
+                android:text="活动中心"/>
 
-            <RelativeLayout
-                android:layout_width="0dp"
+            <hzyj.come.p2p.mvp.ui.widget.gallery.EcoGallery
+                android:id="@+id/gallery"
+                android:layout_width="match_parent"
+                android:layout_height="320px"
+                android:layout_marginTop="@dimen/margin_20"
+                app:selectedScale="1.4"
+                app:unselectedAlpha="0.5"/>
+
+            <TextView
+                android:id="@+id/tv_centre_more"
+                style="@style/text_norm_gray"
+                android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_weight="1">
+                android:gravity="center"
+                android:text="往期活动>"
+                />
+        </com.zhy.autolayout.AutoLinearLayout>
 
-                <TextView
-                    style="@style/text_norm_black"
-                    android:layout_centerInParent="true"
-                    android:drawablePadding="15px"
-                    android:drawableTop="@mipmap/ic_friends"
-                    android:text="大转盘"/>
 
-            </RelativeLayout>
-
-            <RelativeLayout
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1">
-
-                <TextView
-                    style="@style/text_norm_black"
-                    android:layout_centerInParent="true"
-                    android:drawablePadding="15px"
-                    android:drawableTop="@mipmap/ic_friends"
-                    android:text="联系客服"/>
-
-            </RelativeLayout>
-
-        </LinearLayout>
-
-    </LinearLayout>
-
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="230px"
-        android:src="@mipmap/discovers_ad"
-        android:background="@drawable/shape_white_8r"
-        android:layout_marginLeft="@dimen/margin_20"
-        android:layout_marginRight="@dimen/margin_20"/>
-
-</com.zhy.autolayout.AutoLinearLayout>
+    </com.zhy.autolayout.AutoLinearLayout>
+</com.jess.arms.widget.autolayout.AutoScrollView>
