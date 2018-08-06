@@ -115,6 +115,7 @@ public abstract class BaseFragment<P extends IPresenter> extends RxFragment impl
             rootView = view;
         }
         super.onViewCreated(isReuseView ? rootView : view, savedInstanceState);
+        initData(savedInstanceState);
     }
 
     @Override

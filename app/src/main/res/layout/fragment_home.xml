@@ -1,13 +1,191 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
+<com.zhy.autolayout.AutoLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                     android:layout_width="match_parent"
+                                     android:layout_height="match_parent"
+                                     xmlns:GroupViewItem="http://schemas.android.com/apk/res-auto"
+                                     android:background="@color/main_bg"
+                                     android:orientation="vertical"
     >
-   <TextView
+
+   <com.zhy.autolayout.AutoRelativeLayout
        android:layout_width="wrap_content"
-       android:text="@string/title_home"
-       android:layout_height="wrap_content"/>
-</LinearLayout>
+       android:layout_height="250px">
+
+
+   
+
+      <com.zhy.autolayout.AutoLinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:layout_alignParentBottom="true"
+          android:background="@color/colorPrimary">
+
+
+
+         <TextView
+             android:drawableTop="@drawable/saoma"
+             android:layout_width="0dp"
+             android:layout_weight="1"
+             android:textColor="@color/main_while"
+             android:text="扫码支付"
+             android:gravity="center"
+             android:layout_marginLeft="20dp"
+             android:layout_marginRight="20dp"
+             android:layout_marginTop="10dp"
+             android:layout_marginBottom="10dp"
+             android:layout_height="match_parent"
+             />
+
+         <TextView
+             android:drawableTop="@drawable/fukuan"
+             android:layout_width="0dp"
+             android:layout_weight="1"
+             android:textColor="@color/main_while"
+             android:text="快捷支付"
+             android:gravity="center"
+             android:layout_marginLeft="20dp"
+             android:layout_marginRight="20dp"
+             android:layout_marginTop="10dp"
+             android:layout_marginBottom="10dp"
+             android:layout_height="match_parent"
+             />
+
+      </com.zhy.autolayout.AutoLinearLayout>
+   
+   </com.zhy.autolayout.AutoRelativeLayout>
+
+   <com.zhy.autolayout.AutoLinearLayout
+       android:layout_width="match_parent"
+       android:orientation="horizontal"
+       android:layout_height="120px">
+
+      <TextView
+          android:layout_width="0dp"
+          android:layout_weight="1"
+          android:background="@drawable/shape_main_color"
+          android:textColor="@color/main_while"
+          android:text="行用卡代还"
+          android:gravity="center"
+          android:layout_marginLeft="20dp"
+          android:layout_marginTop="10dp"
+          android:layout_marginBottom="10dp"
+          android:layout_height="match_parent"
+          />
+      <TextView
+          android:layout_width="0dp"
+          android:layout_weight="1"
+          android:background="@drawable/shape_main_color"
+          android:textColor="@color/main_while"
+          android:text="贷款"
+          android:gravity="center"
+          android:layout_marginLeft="20dp"
+          android:layout_marginRight="20dp"
+          android:layout_marginTop="10dp"
+          android:layout_marginBottom="10dp"
+          android:layout_height="match_parent"
+          />
+      <TextView
+          android:layout_width="0dp"
+          android:layout_weight="1"
+          android:background="@drawable/shape_main_color"
+          android:textColor="@color/main_while"
+          android:text="余额查询"
+          android:gravity="center"
+          android:layout_marginRight="20dp"
+          android:layout_marginTop="10dp"
+          android:layout_marginBottom="10dp"
+          android:layout_height="match_parent"
+          />
+    
+   </com.zhy.autolayout.AutoLinearLayout>
+   <com.zhy.autolayout.AutoLinearLayout
+       android:layout_width="match_parent"
+       android:orientation="horizontal"
+       android:layout_height="120px">
+
+      <TextView
+          android:layout_width="0dp"
+          android:layout_weight="1"
+          android:background="@drawable/shape_main_color"
+          android:textColor="@color/main_while"
+          android:text="账单分期"
+          android:gravity="center"
+          android:layout_marginLeft="20dp"
+          android:layout_marginTop="10dp"
+          android:layout_marginBottom="10dp"
+          android:layout_height="match_parent"
+          />
+      <TextView
+          android:layout_width="0dp"
+          android:layout_weight="1"
+          android:background="@drawable/shape_main_color"
+          android:textColor="@color/main_while"
+          android:text="转账"
+          android:gravity="center"
+          android:layout_marginLeft="20dp"
+          android:layout_marginRight="20dp"
+          android:layout_marginTop="10dp"
+          android:layout_marginBottom="10dp"
+          android:layout_height="match_parent"
+          />
+      <TextView
+          android:layout_width="0dp"
+          android:layout_weight="1"
+          android:background="@drawable/shape_main_color"
+          android:textColor="@color/main_while"
+          android:text="信用卡申请"
+          android:gravity="center"
+          android:layout_marginRight="20dp"
+          android:layout_marginTop="10dp"
+          android:layout_marginBottom="10dp"
+          android:layout_height="match_parent"
+          />
+    
+   </com.zhy.autolayout.AutoLinearLayout>
+   <com.zhy.autolayout.AutoLinearLayout
+       android:layout_width="match_parent"
+       android:orientation="vertical"
+       android:paddingTop="@dimen/margin_20"
+       android:paddingBottom="@dimen/margin_20"
+       android:layout_marginLeft="@dimen/margin_20"
+       android:layout_marginRight="@dimen/margin_20"
+       android:background="@drawable/shape_white_8r"
+       android:layout_height="wrap_content">
+      <hzyj.come.p2p.mvp.ui.widget.GroupViewItem
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          GroupViewItem:leftImage="@drawable/dae"
+          GroupViewItem:title="大额交易"
+          />
+      <View
+          style="@style/GrayLineHorizontal"
+         />
+      <hzyj.come.p2p.mvp.ui.widget.GroupViewItem
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          GroupViewItem:leftImage="@drawable/licai"
+          GroupViewItem:title="理财"
+          />
+      <View
+          style="@style/GrayLineHorizontal"
+          />
+      <hzyj.come.p2p.mvp.ui.widget.GroupViewItem
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          GroupViewItem:leftImage="@drawable/chexiao"
+          GroupViewItem:title="撤销交易"
+          />
+  
+      <View
+          style="@style/GrayLineHorizontal"
+          />
+      <hzyj.come.p2p.mvp.ui.widget.GroupViewItem
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          GroupViewItem:leftImage="@drawable/shoujichognzhi"
+          GroupViewItem:title="手机充值"
+          />
+  
+
+   </com.zhy.autolayout.AutoLinearLayout>
+</com.zhy.autolayout.AutoLinearLayout>

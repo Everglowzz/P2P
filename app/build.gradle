@@ -54,6 +54,7 @@ dependencies {
     compile rootProject.ext.dependencies["butterknife"]
     compile rootProject.ext.dependencies["androideventbus"]    
     compile rootProject.ext.dependencies["rxlifecycle2-components"]
+    compile rootProject.ext.dependencies["banner"]
     
     compile 'com.roughike:bottom-bar:2.3.1' //底部导航
     annotationProcessor rootProject.ext.dependencies["butterknife-compiler"] //Butterknife 插件,很多人因为没加这个而报错,切记!!!

@@ -77,8 +77,8 @@ public class GroupViewItem extends AutoRelativeLayout {
     private void initTypedArray(Context context, AttributeSet attrs) {
         TypedArray typedArray = context.obtainStyledAttributes(attrs, R.styleable.GroupViewItem);
         mLeftImage = typedArray.getResourceId(R.styleable.GroupViewItem_leftImage, R.mipmap.ic_launcher);
-        mRightImage = typedArray.getResourceId(R.styleable.GroupViewItem_rightImage, R.mipmap.ic_launcher);
-        mItemHeight = typedArray.getDimension(R.styleable.GroupViewItem_itemHeight, 90);
+        mRightImage = typedArray.getResourceId(R.styleable.GroupViewItem_rightImage, R.drawable.arrow_right);
+        mItemHeight = typedArray.getDimension(R.styleable.GroupViewItem_itemHeight, 100);
         mItemTitle = typedArray.getString(R.styleable.GroupViewItem_title);
         mIsShowleft = typedArray.getBoolean(R.styleable.GroupViewItem_isShowLeft, true);
         mIsShowRight = typedArray.getBoolean(R.styleable.GroupViewItem_isShowRight, true);

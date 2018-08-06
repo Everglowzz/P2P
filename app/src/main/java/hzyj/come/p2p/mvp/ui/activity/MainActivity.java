@@ -28,10 +28,9 @@ import hzyj.come.p2p.di.component.DaggerMainComponent;
 import hzyj.come.p2p.di.module.MainModule;
 import hzyj.come.p2p.mvp.contract.MainContract;
 import hzyj.come.p2p.mvp.presenter.MainPresenter;
-import hzyj.come.p2p.mvp.ui.fragment.DiscoverFragment;
 import hzyj.come.p2p.mvp.ui.fragment.HomeFragment;
 import hzyj.come.p2p.mvp.ui.fragment.MineFragment;
-import hzyj.come.p2p.mvp.ui.fragment.ProjectsFragment;
+import hzyj.come.p2p.mvp.ui.fragment.ShopFragment;
 
 import static com.jess.arms.utils.Preconditions.checkNotNull;
 import static hzyj.come.p2p.app.EventBusTags.ACTIVITY_FRAGMENT_REPLACE;
@@ -51,21 +50,18 @@ public class MainActivity extends BaseActivity<MainPresenter> implements MainCon
     BottomBar mBottomBar;
     private List<Integer> mTitles;   
     private List<Fragment> mFragments;
-    private int mReplace = 0;
+    private int mReplace = 1;
 
     private OnTabSelectListener mOnTabSelectListener = tabId -> {
         switch (tabId) {
             case R.id.tab_home:
-                mReplace = 0;
-                break;
-            case R.id.tab_projects:
                 mReplace = 1;
                 break;
-            case R.id.tab_discover:
-                mReplace = 2;
+            case R.id.tab_shop:
+                mReplace = 0;
                 break;
             case R.id.tab_mine:
-                mReplace = 3;
+                mReplace = 2;
                 break;
         }
         mToolbarTitle.setText(mTitles.get(mReplace));
@@ -92,34 +88,29 @@ public class MainActivity extends BaseActivity<MainPresenter> implements MainCon
         toolbarBack.setVisibility(View.GONE);
         if (mTitles == null) {
             mTitles = new ArrayList<>();
-            mTitles.add(R.string.title_home);
-            mTitles.add(R.string.title_projects);
-            mTitles.add(R.string.title_discover);
+            mTitles.add(R.string.title_empty);
+            mTitles.add(R.string.title_empty);
             mTitles.add(R.string.title_mine);
         }
-        DiscoverFragment discoverFragment;
         HomeFragment homeFragment;
         MineFragment mineFragment;
-        ProjectsFragment projectsFragment;
+        ShopFragment shopFragment;
         if (savedInstanceState == null) {
             homeFragment = HomeFragment.newInstance();
-            discoverFragment = DiscoverFragment.newInstance();
+            shopFragment = ShopFragment.newInstance();
             mineFragment = MineFragment.newInstance();
-            projectsFragment = ProjectsFragment.newInstance();
         }else{
             mReplace = savedInstanceState.getInt(ACTIVITY_FRAGMENT_REPLACE);
             android.support.v4.app.FragmentManager fm = getSupportFragmentManager();
             homeFragment= (HomeFragment) FragmentUtils.findFragment(fm,HomeFragment.class);
-            discoverFragment= (DiscoverFragment) FragmentUtils.findFragment(fm,DiscoverFragment.class);
+            shopFragment= (ShopFragment) FragmentUtils.findFragment(fm,ShopFragment.class);
             mineFragment= (MineFragment) FragmentUtils.findFragment(fm,MineFragment.class);
-            projectsFragment= (ProjectsFragment) FragmentUtils.findFragment(fm,ProjectsFragment.class);
 
         }
         if (mFragments == null) {
             mFragments = new ArrayList<>();
+            mFragments.add(shopFragment);
             mFragments.add(homeFragment);
-            mFragments.add(projectsFragment);
-            mFragments.add(discoverFragment);
             mFragments.add(mineFragment);
         }
         FragmentUtils.addFragments(getSupportFragmentManager(), mFragments, R.id.main_frame, 0);
