@@ -8,6 +8,7 @@
     <color name="text_gray">#949494</color>
     <color name="main_black">#272e3b</color>
     <color name="main_while">#ffffff</color>
+    <color name="main_orange">#d74a30</color>
     
     <dimen name="margin_20">20px</dimen>
 
@@ -22,5 +23,9 @@
     <dimen name="cardPadding5">2px</dimen>
     <dimen name="cardRadius">10dp</dimen>
 
-
+   
+    <color name="color_orange_red">#f03f33</color>
+    <color name="lineColor">#11333333</color>
+    <color name="black_font">#bb000000</color>
+    <color name="black_bg">#66333333</color>
 </resources>

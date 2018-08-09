@@ -31,6 +31,7 @@ import hzyj.come.p2p.mvp.presenter.MainPresenter;
 import hzyj.come.p2p.mvp.ui.fragment.HomeFragment;
 import hzyj.come.p2p.mvp.ui.fragment.MineFragment;
 import hzyj.come.p2p.mvp.ui.fragment.ShopFragment;
+import hzyj.come.p2p.mvp.ui.fragment.homefragment.MainHomeFragment;
 
 import static com.jess.arms.utils.Preconditions.checkNotNull;
 import static hzyj.come.p2p.app.EventBusTags.ACTIVITY_FRAGMENT_REPLACE;
@@ -94,22 +95,22 @@ public class MainActivity extends BaseActivity<MainPresenter> implements MainCon
         }
         HomeFragment homeFragment;
         MineFragment mineFragment;
-        ShopFragment shopFragment;
+        MainHomeFragment mainHomeFragment;
         if (savedInstanceState == null) {
             homeFragment = HomeFragment.newInstance();
-            shopFragment = ShopFragment.newInstance();
+            mainHomeFragment = MainHomeFragment.newInstance();
             mineFragment = MineFragment.newInstance();
         }else{
             mReplace = savedInstanceState.getInt(ACTIVITY_FRAGMENT_REPLACE);
             android.support.v4.app.FragmentManager fm = getSupportFragmentManager();
             homeFragment= (HomeFragment) FragmentUtils.findFragment(fm,HomeFragment.class);
-            shopFragment= (ShopFragment) FragmentUtils.findFragment(fm,ShopFragment.class);
+            mainHomeFragment= (MainHomeFragment) FragmentUtils.findFragment(fm,MainHomeFragment.class);
             mineFragment= (MineFragment) FragmentUtils.findFragment(fm,MineFragment.class);
 
         }
         if (mFragments == null) {
             mFragments = new ArrayList<>();
-            mFragments.add(shopFragment);
+            mFragments.add(mainHomeFragment);
             mFragments.add(homeFragment);
             mFragments.add(mineFragment);
         }

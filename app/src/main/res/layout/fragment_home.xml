@@ -9,16 +9,17 @@
 
    <com.zhy.autolayout.AutoRelativeLayout
        android:layout_width="wrap_content"
-       android:layout_height="250px">
+       android:background="@color/colorPrimary"
+       android:layout_height="280px">
 
 
    
 
       <com.zhy.autolayout.AutoLinearLayout
           android:layout_width="match_parent"
-          android:layout_height="match_parent"
+          android:layout_height="wrap_content"
           android:layout_alignParentBottom="true"
-          android:background="@color/colorPrimary">
+         >
 
 
 
@@ -29,10 +30,10 @@
              android:textColor="@color/main_while"
              android:text="扫码支付"
              android:gravity="center"
+             android:drawablePadding="10dp"
              android:layout_marginLeft="20dp"
              android:layout_marginRight="20dp"
-             android:layout_marginTop="10dp"
-             android:layout_marginBottom="10dp"
+             android:layout_marginBottom="20dp"
              android:layout_height="match_parent"
              />
 
@@ -43,10 +44,10 @@
              android:textColor="@color/main_while"
              android:text="快捷支付"
              android:gravity="center"
+             android:drawablePadding="10dp"
              android:layout_marginLeft="20dp"
              android:layout_marginRight="20dp"
-             android:layout_marginTop="10dp"
-             android:layout_marginBottom="10dp"
+             android:layout_marginBottom="20dp"
              android:layout_height="match_parent"
              />
 

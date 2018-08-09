@@ -8,8 +8,9 @@
     >
 
     <com.zhy.autolayout.AutoRelativeLayout
+       
         android:layout_width="wrap_content"
-        android:layout_height="340px">
+        android:layout_height="380px">
 
 
         <View
@@ -118,7 +119,7 @@
             android:id="@+id/profile_image"
             android:layout_width="120px"
             android:layout_height="120px"
-            android:layout_marginTop="20px"
+            android:layout_marginTop="60px"
             android:layout_centerHorizontal="true"
             android:src="@mipmap/default_photo"
             app:civ_border_width="4px"

@@ -62,4 +62,5 @@ dependencies {
     implementation rootProject.ext.dependencies["progressmanager"]
     implementation rootProject.ext.dependencies["retrofit-url-manager"]
     implementation 'de.hdodenhof:circleimageview:2.2.0'
+    compile project(':common')
 }

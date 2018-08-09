@@ -1,16 +1,72 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.zhy.autolayout.AutoLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<com.jess.arms.widget.autolayout.AutoScrollView xmlns:android="http://schemas.android.com/apk/res/android"
                                      android:layout_width="match_parent"
                                      android:layout_height="match_parent"
                                      xmlns:GroupViewItem="http://schemas.android.com/apk/res-auto"
                                      android:background="@color/main_bg"
-                                     android:orientation="vertical"
+                                   
     >
+    <com.zhy.autolayout.AutoLinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="match_parent">
+        
+   
     <com.youth.banner.Banner
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:id="@+id/banner"
         android:layout_width="match_parent"
         android:layout_height="300px" />
-   
+    <com.zhy.autolayout.AutoRelativeLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="@dimen/margin_20"
+        android:layout_marginTop="@dimen/margin_20"
+        android:padding="5dp"
+        android:background="@drawable/shape_list_item_bg"
+        android:layout_marginRight="@dimen/margin_20"
+        android:layout_height="70dp">
+        <TextView
+            android:drawableTop="@drawable/temai"
+            android:text="特卖"
+            android:id="@+id/tv1"
+            android:textColor="@color/main_orange"
+            android:drawablePadding="2dp"
+            android:gravity="center"
+            android:layout_marginLeft="@dimen/margin_20"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:id="@+id/tv_rool1"
+            android:layout_toRightOf="@+id/tv1"
+            android:singleLine="true"
+            android:text="秦品轩 陕西特产礼盒零食大礼包富平琼锅糖过节送礼"
+            android:layout_marginLeft="@dimen/margin_20"
+            android:textColor="@color/main_black"
+            android:gravity="center"
+            
+            android:textSize="14sp"
+            android:ellipsize="marquee"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"/>
+        <TextView
+            android:id="@+id/tv_rool2"
+            android:layout_toRightOf="@+id/tv1"
+            android:singleLine="true"
+            android:textSize="14sp"
+            android:text="宝鸡岐山擀面皮红油米皮    西安特产  300gX6袋   42.8"
+            android:layout_marginLeft="@dimen/margin_20"
+            android:textColor="@color/main_black"
+            android:gravity="center"
+            android:ellipsize="marquee"
+            android:layout_alignParentBottom="true"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"/>
+        
+        
+    </com.zhy.autolayout.AutoRelativeLayout>
+    </com.zhy.autolayout.AutoLinearLayout>
 
-</com.zhy.autolayout.AutoLinearLayout>
+</com.jess.arms.widget.autolayout.AutoScrollView>

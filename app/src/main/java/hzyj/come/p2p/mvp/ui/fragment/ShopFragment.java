@@ -6,6 +6,7 @@ import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import com.jess.arms.di.component.AppComponent;
 import com.youth.banner.Banner;
@@ -31,8 +32,13 @@ public class ShopFragment extends BaseFragment {
     @BindView(R.id.banner)
     Banner banner;
     Unbinder unbinder;
-    private ArrayList<Integer> images =new ArrayList<>();
-    private ArrayList<String> titles =new ArrayList<>();
+    @BindView(R.id.tv_rool1)
+    TextView mTvRool1;
+    @BindView(R.id.tv_rool2)
+    TextView mTvRool2;
+    private ArrayList<Integer> images = new ArrayList<>();
+    private ArrayList<String> titles = new ArrayList<>();
+
     public static ShopFragment newInstance() {
 
         Bundle args = new Bundle();
@@ -83,6 +89,8 @@ public class ShopFragment extends BaseFragment {
         banner.setIndicatorGravity(BannerConfig.CENTER);
         //banner设置方法全部调用完毕时最后调用
         banner.start();
+        mTvRool1.setSelected(true);
+        mTvRool2.setSelected(true);
     }
 
     @Override
