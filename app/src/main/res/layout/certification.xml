@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/main_bg"
+                android:fitsSystemWindows="false">
+
+
+    <include
+        android:id="@+id/ll_top"
+        layout="@layout/toolbar"
+        />
+
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/ll_top">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/margin_20"
+                android:paddingRight="@dimen/margin_20">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="真实姓名"
+                    android:textColor="@color/black"
+
+                    android:textSize="@dimen/text_14"/>
+
+                <EditText
+                    android:id="@+id/et_name"
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="70dp"
+                    android:background="@null"
+                    android:hint="您的真实姓名"
+                    android:maxLines="1"
+                    android:maxLength="10"
+                    android:textSize="@dimen/text_14"/>
+
+              
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/margin_20"
+                android:paddingRight="@dimen/margin_20">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="身份证号"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_14"/>
+
+                <EditText
+                    android:id="@+id/et_shenfenzhegn"
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="70dp"
+                    android:background="@null"
+                    android:hint="15或18位身份证号"
+                    android:maxLength="18"
+                    android:maxLines="1"
+                    android:inputType="number"
+                    android:textSize="@dimen/text_14"/>
+
+                <ImageView
+                    android:id="@+id/shoot"
+                    android:layout_width="wrap_content"
+                    android:src="@drawable/shoot"
+                    android:layout_alignParentRight="true"
+                    android:layout_height="wrap_content"/>
+
+            </RelativeLayout>
+            <RelativeLayout
+                
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/margin_20"
+                android:paddingRight="@dimen/margin_20">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="手机号码"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_14"/>
+
+                <EditText
+                    android:id="@+id/et_phone"
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="70dp"
+                    android:background="@null"
+                    android:hint="请填写要绑定的手机号码"
+                    android:maxLength="11"
+                    android:inputType="number"
+                    android:textSize="@dimen/text_14"/>
+
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_marginTop="10dp"
+                android:background="@color/white"
+                android:layout_width="match_parent"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/margin_20"
+                android:paddingRight="@dimen/margin_20"
+                android:layout_height="50dp">
+
+
+                <EditText
+                    android:maxLength="6"
+                    android:id="@+id/et_code"
+                    android:layout_width="250dp"
+                    android:background="@null"
+                    android:hint="请输入验证码"
+                    android:maxLines="1"
+                    android:textSize="@dimen/text_14"
+                    android:inputType="number"
+                    android:layout_marginLeft="20dp"
+                    android:layout_height="match_parent"/>
+                <View
+                    android:layout_width="1dp"
+                    android:background="@color/main_bg"
+                    android:layout_alignLeft="@+id/tv_send_code"
+                    android:layout_height="match_parent"/>
+
+                <TextView
+                    android:id="@+id/tv_send_code"
+                    android:layout_width="120dp"
+                    android:text="获取验证码"
+                    android:gravity="center"
+                    android:textColor="@color/orange_17527"
+                    android:layout_alignParentRight="true"
+                    android:layout_height="match_parent"/>
+
+            </RelativeLayout>
+            <Button
+                
+                android:enabled="false"
+                android:id="@+id/btn_ok"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="21dp"
+                android:layout_marginLeft="@dimen/margin_20"
+                android:layout_marginRight="@dimen/margin_20"
+                android:background="@drawable/btn_selected"
+                android:text="下一步"
+                android:textColor="@color/white"
+                android:textSize="18dp" />
+        </LinearLayout>
+    </ScrollView>
+
+
+</RelativeLayout>

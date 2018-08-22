@@ -48,4 +48,13 @@
 
     <!--分割线-->
     <dimen name="common_divider">1px</dimen>
+
+
+    <dimen name="text_12">12sp</dimen>
+    <dimen name="text_14">14sp</dimen>
+    <dimen name="text_16">16sp</dimen>
+    <dimen name="text_17">17sp</dimen>
+    <dimen name="text_18">18sp</dimen>
+    <dimen name="text_20">20sp</dimen>
+    <dimen name="padding">16dp</dimen>
 </resources>

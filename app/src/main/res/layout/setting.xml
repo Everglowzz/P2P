@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                xmlns:GroupViewItem="http://schemas.android.com/apk/res-auto"
+                android:background="@color/main_bg"
+                android:fitsSystemWindows="false">
+
+
+    <include
+        android:id="@+id/ll_top"
+        layout="@layout/toolbar"
+        />
+
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/ll_top">
+
+        <LinearLayout
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.zhy.autolayout.AutoLinearLayout
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:paddingTop="@dimen/margin_20"
+                android:layout_marginBottom="@dimen/margin_20"
+                android:paddingBottom="@dimen/margin_20"
+                android:layout_marginLeft="@dimen/margin_20"
+                android:layout_marginRight="@dimen/margin_20"
+                android:background="@drawable/shape_white_8r"
+                android:layout_height="wrap_content">
+                <hzyj.come.p2p.mvp.ui.widget.GroupViewItem
+                    android:id="@+id/item_entrench"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    GroupViewItem:leftImage="@mipmap/mima_baohu"
+                    GroupViewItem:title="安全防护"
+                    />
+                <View style="@style/GrayLineHorizontal"/>
+                <hzyj.come.p2p.mvp.ui.widget.GroupViewItem
+                    android:id="@+id/item_check_update"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    GroupViewItem:leftImage="@mipmap/check_updata"
+                    GroupViewItem:title="检测新版本"
+                    />
+                
+
+                <View style="@style/GrayLineHorizontal"/>
+                <hzyj.come.p2p.mvp.ui.widget.GroupViewItem
+                    android:id="@+id/item_us"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    GroupViewItem:leftImage="@mipmap/guanyu"
+                    GroupViewItem:title="关于我们"
+                    />
+
+
+
+            </com.zhy.autolayout.AutoLinearLayout>
+            <Button
+                
+                android:enabled="true"
+                android:id="@+id/btn_logout"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="21dp"
+                android:layout_marginLeft="@dimen/margin_20"
+                android:layout_marginRight="@dimen/margin_20"
+                android:background="@drawable/btn_selected"
+                android:text="退出登录"
+                android:textColor="@color/white"
+                android:textSize="18dp" />
+        </LinearLayout>
+    </ScrollView>
+
+
+</RelativeLayout>

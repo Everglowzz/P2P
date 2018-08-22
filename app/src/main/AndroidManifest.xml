@@ -3,26 +3,26 @@
           package="hzyj.come.p2p">
 
     <uses-permission android:name="android.permission.INTERNET"/>
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <!--<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>-->
+    <!--<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>-->
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
     <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
     <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
 
+    <meta-data
+        android:name="me.jessyan.mvparms.demo.app.GlobalConfiguration"
+        android:value="ConfigModule"/>
+
     <application
-        android:name="hzyj.come.p2p.app.MyApplication"
+        android:name=".app.MyApplication"
         android:allowBackup="true"
         android:icon="@drawable/login_logo"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-
         <activity android:name=".mvp.ui.activity.MainActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
-                <category android:name="android.intent.category.LAUNCHER"/>
-            </intent-filter>
+           
         </activity>
 
         <meta-data
@@ -31,11 +31,36 @@
         <meta-data
             android:name="design_height"
             android:value="1280"/>
-   
-        
-        
+
+        <activity android:name=".mvp.login.LoginActivity">
+           
+        </activity>
+        <activity android:name=".mvp.register.RegisterActivity"/>
+        <activity android:name=".mvp.forgetpwd.ForgetpwdActivity"/>
+        <activity
+            android:name=".mvp.gate.GateActivity"
+            android:theme="@style/SplashTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:name=".copy.AcUserInfo"/>
+        <activity android:name=".copy.AcChangenickName"/>
+        <activity android:name=".copy.SelectPayActivity">
+        </activity>
+        <activity android:name=".copy.CardManngeActivity"/>
+        <activity android:name=".copy.AddCardActivity"/>
+        <activity android:name=".copy.CardInfoActivity"/>
+        <activity android:name=".copy.InputCodeActivity"/>
+        <activity android:name=".copy.CertificationActivity"/>
+        <activity android:name=".copy.credit.CreditFenqiActivity"/>
+        <activity android:name=".copy.credit.FenqiInfoActivity"/>
+        <activity android:name=".copy.credit.KuaijiePayActivity"/>
+        <activity android:name=".copy.SettingActivity"/>
+        <activity android:name=".copy.dialog.AcAddressList"/>
+        <activity android:name=".copy.dialog.AcAddAddressActivity"/>
     </application>
-    <meta-data
-        android:name="me.jessyan.mvparms.demo.app.GlobalConfiguration"
-        android:value="ConfigModule"/>
+
 </manifest>

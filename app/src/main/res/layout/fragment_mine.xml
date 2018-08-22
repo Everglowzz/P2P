@@ -1,12 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.zhy.autolayout.AutoLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                                     android:layout_width="match_parent"
-                                     android:layout_height="match_parent"
-                                     xmlns:GroupViewItem="http://schemas.android.com/apk/res-auto"
-                                     android:background="@color/main_bg"
-                                     android:orientation="vertical"
-    >
 
+    <com.jess.arms.widget.autolayout.AutoScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        xmlns:GroupViewItem="http://schemas.android.com/apk/res-auto"
+        android:background="@color/main_bg"
+        android:orientation="vertical"
+        >
+        
+  
+<com.zhy.autolayout.AutoLinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:GroupViewItem="http://schemas.android.com/apk/res-auto"
+    android:background="@color/main_bg"
+    android:orientation="vertical"
+    >
     <com.zhy.autolayout.AutoRelativeLayout
        
         android:layout_width="wrap_content"
@@ -27,21 +38,14 @@
             android:background="@drawable/shape_white_8r">
             <TextView
                 android:layout_width="wrap_content"
-                android:text="总资产(元)"
+                android:id="@+id/nick_name"
+                android:text="夏天的风"
                 android:textSize="14sp"
                 android:textColor="@color/colorPrimary"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="60px"
                 android:layout_height="wrap_content"/>
-            <TextView
-                android:layout_width="wrap_content"
-                android:text="2000.00"
-                android:id="@+id/tv_total_money"
-                android:textColor="@color/text_gray"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="100px"
-                android:textSize="14sp"
-                android:layout_height="wrap_content"/>
+     
          
             <com.zhy.autolayout.AutoLinearLayout
                 android:layout_width="match_parent"
@@ -50,29 +54,21 @@
                 android:layout_marginRight="70px"
                 android:layout_marginBottom="60px"
                 android:layout_height="40px">
-                <TextView
-                    android:id="@+id/tv_money_yesterday"
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:text="50.0"
-                    android:textColor="@color/colorPrimary"
-                    android:textSize="14sp"
-                    android:gravity="center"
-                    android:layout_height="match_parent"/>
+             
                 <TextView
                     android:id="@+id/tv_money_balance"
                     android:layout_width="0dp"
                     android:layout_weight="1"
-                    android:text="50.0"
+                    android:text="50.00"
                     android:textColor="@color/colorPrimary"
                     android:textSize="14sp"
                     android:gravity="center"
                     android:layout_height="match_parent"/>
                 <TextView
-                    android:id="@+id/tv_money_accumulate"
+                    android:id="@+id/tv_integral"
                     android:layout_width="0dp"
                     android:layout_weight="1"
-                    android:text="50.0"
+                    android:text="88000"
                     android:textColor="@color/colorPrimary"
                     android:textSize="14sp"
                     android:gravity="center"
@@ -86,14 +82,7 @@
                 android:layout_marginRight="70px"
                 android:layout_marginBottom="20px"
                 android:layout_height="40px">
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:text="昨日收益(元)"
-                    android:textColor="@color/text_gray"
-                    android:textSize="12sp"
-                    android:gravity="center"
-                    android:layout_height="match_parent"/>
+             
                 <TextView
                     android:layout_width="0dp"
                     android:layout_weight="1"
@@ -105,7 +94,7 @@
                 <TextView
                     android:layout_width="0dp"
                     android:layout_weight="1"
-                    android:text="累积收益(元)"
+                    android:text="会员积分"
                     android:textColor="@color/text_gray"
                     android:textSize="12sp"
                     android:gravity="center"
@@ -159,60 +148,66 @@
         android:layout_width="match_parent"
         android:orientation="vertical"
         android:paddingTop="@dimen/margin_20"
+        android:layout_marginBottom="@dimen/margin_20"
         android:paddingBottom="@dimen/margin_20"
         android:layout_marginLeft="@dimen/margin_20"
         android:layout_marginRight="@dimen/margin_20"
         android:background="@drawable/shape_white_8r"
         android:layout_height="wrap_content">
         <hzyj.come.p2p.mvp.ui.widget.GroupViewItem
+            android:id="@+id/item_card"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            GroupViewItem:leftImage="@mipmap/default_photo"
-            GroupViewItem:title="资金预览"
+            GroupViewItem:leftImage="@mipmap/yinhangka"
+            GroupViewItem:title="我的银行卡"
             />
+        <View style="@style/GrayLineHorizontal"/>
         <hzyj.come.p2p.mvp.ui.widget.GroupViewItem
+            android:id="@+id/item_truth"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            GroupViewItem:leftImage="@mipmap/default_photo"
-            GroupViewItem:title="借贷记录"
+            GroupViewItem:leftImage="@mipmap/renzheng"
+            GroupViewItem:title="实名认证"
             />
+        <View style="@style/GrayLineHorizontal"/>
+      
         <hzyj.come.p2p.mvp.ui.widget.GroupViewItem
+            android:id="@+id/item_order"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            GroupViewItem:leftImage="@mipmap/default_photo"
-            GroupViewItem:title="借贷记录"
+            GroupViewItem:leftImage="@mipmap/dingdan"
+            GroupViewItem:title="我的订单"
             />
+        <View style="@style/GrayLineHorizontal"/>
         <hzyj.come.p2p.mvp.ui.widget.GroupViewItem
+            android:id="@+id/item_shopping"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            GroupViewItem:leftImage="@mipmap/default_photo"
-            GroupViewItem:title="借贷记录"
+            GroupViewItem:leftImage="@mipmap/gouwuche"
+            GroupViewItem:title="购物车"
             />
+
+        <View style="@style/GrayLineHorizontal"/>
         <hzyj.come.p2p.mvp.ui.widget.GroupViewItem
+            android:id="@+id/item_address"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            GroupViewItem:leftImage="@mipmap/default_photo"
-            GroupViewItem:title="借贷记录"
+            GroupViewItem:leftImage="@mipmap/dizhi"
+            GroupViewItem:title="收货地址"
             />
+        
+      
+        <View style="@style/GrayLineHorizontal"/>
         <hzyj.come.p2p.mvp.ui.widget.GroupViewItem
+            android:id="@+id/item_setting"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            GroupViewItem:leftImage="@mipmap/default_photo"
-            GroupViewItem:title="借贷记录"
+            GroupViewItem:leftImage="@mipmap/setting"
+            GroupViewItem:title="设置"
             />
-        <hzyj.come.p2p.mvp.ui.widget.GroupViewItem
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            GroupViewItem:leftImage="@mipmap/default_photo"
-            GroupViewItem:title="借贷记录"
-            />
-        <hzyj.come.p2p.mvp.ui.widget.GroupViewItem
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            GroupViewItem:leftImage="@mipmap/default_photo"
-            GroupViewItem:title="借贷记录"
-            GroupViewItem:isShowRight="false"
-            />
+        
+      
         
     </com.zhy.autolayout.AutoLinearLayout>
 </com.zhy.autolayout.AutoLinearLayout>
+</com.jess.arms.widget.autolayout.AutoScrollView>

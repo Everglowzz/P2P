@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/main_bg"
+                android:fitsSystemWindows="false">
+
+
+    <include
+        android:id="@+id/ll_top"
+        layout="@layout/toolbar"
+        />
+
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/ll_top">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_20"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="20dp"
+                android:text="请绑定持卡人本人的银行卡"/>
+
+            <RelativeLayout
+
+                android:background="@color/white"
+                android:layout_width="match_parent"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/margin_20"
+                android:paddingRight="@dimen/margin_20"
+                android:layout_height="50dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:text="卡号"
+                    android:textSize="@dimen/text_14"
+                    android:textColor="@color/black"
+                    android:layout_height="wrap_content"/>
+                
+                <EditText
+                    android:maxLength="19"
+                    android:id="@+id/et_code"
+                    android:layout_width="250dp"
+                    android:background="@null"
+                    android:hint="安全保障/免手续费"
+                    android:maxLines="1"
+                    android:textSize="@dimen/text_14"
+                    android:inputType="number"
+                    android:layout_marginLeft="40dp"
+                    android:layout_height="wrap_content"/>
+                
+                <ImageView
+                    android:id="@+id/shoot"
+                    android:layout_width="wrap_content"
+                    android:src="@drawable/shoot"
+                    android:layout_alignParentRight="true"
+                    android:layout_height="wrap_content"/>
+
+            </RelativeLayout>
+
+            <Button
+                
+                android:enabled="false"
+                android:id="@+id/btn_ok"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="21dp"
+                android:layout_marginLeft="@dimen/margin_20"
+                android:layout_marginRight="@dimen/margin_20"
+                android:background="@drawable/btn_selected"
+                android:text="下一步"
+                android:textColor="@color/white"
+                android:textSize="18dp" />
+        </LinearLayout>
+    </ScrollView>
+
+
+</RelativeLayout>

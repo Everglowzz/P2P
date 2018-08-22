@@ -24,6 +24,7 @@
 
 
          <TextView
+             android:id="@+id/tv_shaoma"
              android:drawableTop="@drawable/saoma"
              android:layout_width="0dp"
              android:layout_weight="1"
@@ -38,6 +39,7 @@
              />
 
          <TextView
+             android:id="@+id/tv_kuaijie"
              android:drawableTop="@drawable/fukuan"
              android:layout_width="0dp"
              android:layout_weight="1"
@@ -59,8 +61,22 @@
        android:layout_width="match_parent"
        android:orientation="horizontal"
        android:layout_height="120px">
-
       <TextView
+          android:id="@+id/fenqi"
+          android:layout_width="0dp"
+          android:layout_weight="1"
+          android:background="@drawable/shape_main_color"
+          android:textColor="@color/main_while"
+          android:text="信用卡分期"
+          android:gravity="center"
+          android:layout_marginLeft="20dp"
+       
+          android:layout_marginTop="10dp"
+          android:layout_marginBottom="10dp"
+          android:layout_height="match_parent"
+          />
+      <TextView
+          android:id="@+id/tv_daihuan"
           android:layout_width="0dp"
           android:layout_weight="1"
           android:background="@drawable/shape_main_color"
@@ -69,34 +85,12 @@
           android:gravity="center"
           android:layout_marginLeft="20dp"
           android:layout_marginTop="10dp"
-          android:layout_marginBottom="10dp"
-          android:layout_height="match_parent"
-          />
-      <TextView
-          android:layout_width="0dp"
-          android:layout_weight="1"
-          android:background="@drawable/shape_main_color"
-          android:textColor="@color/main_while"
-          android:text="贷款"
-          android:gravity="center"
-          android:layout_marginLeft="20dp"
           android:layout_marginRight="20dp"
-          android:layout_marginTop="10dp"
           android:layout_marginBottom="10dp"
           android:layout_height="match_parent"
           />
-      <TextView
-          android:layout_width="0dp"
-          android:layout_weight="1"
-          android:background="@drawable/shape_main_color"
-          android:textColor="@color/main_while"
-          android:text="余额查询"
-          android:gravity="center"
-          android:layout_marginRight="20dp"
-          android:layout_marginTop="10dp"
-          android:layout_marginBottom="10dp"
-          android:layout_height="match_parent"
-          />
+   
+  
     
    </com.zhy.autolayout.AutoLinearLayout>
    <com.zhy.autolayout.AutoLinearLayout
@@ -105,37 +99,28 @@
        android:layout_height="120px">
 
       <TextView
+          android:id="@+id/tv_wangyin"
           android:layout_width="0dp"
           android:layout_weight="1"
           android:background="@drawable/shape_main_color"
           android:textColor="@color/main_while"
-          android:text="账单分期"
+          android:text="网银支付"
           android:gravity="center"
           android:layout_marginLeft="20dp"
           android:layout_marginTop="10dp"
           android:layout_marginBottom="10dp"
           android:layout_height="match_parent"
           />
+  
       <TextView
-          android:layout_width="0dp"
-          android:layout_weight="1"
-          android:background="@drawable/shape_main_color"
-          android:textColor="@color/main_while"
-          android:text="转账"
-          android:gravity="center"
-          android:layout_marginLeft="20dp"
-          android:layout_marginRight="20dp"
-          android:layout_marginTop="10dp"
-          android:layout_marginBottom="10dp"
-          android:layout_height="match_parent"
-          />
-      <TextView
+          android:id="@+id/tv_shengqing"
           android:layout_width="0dp"
           android:layout_weight="1"
           android:background="@drawable/shape_main_color"
           android:textColor="@color/main_while"
           android:text="信用卡申请"
           android:gravity="center"
+          android:layout_marginLeft="20dp"
           android:layout_marginRight="20dp"
           android:layout_marginTop="10dp"
           android:layout_marginBottom="10dp"

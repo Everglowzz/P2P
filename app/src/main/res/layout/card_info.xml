@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/main_bg"
+                android:fitsSystemWindows="false">
+
+
+    <include
+        android:id="@+id/ll_top"
+        layout="@layout/toolbar"
+        />
+
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/ll_top">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/margin_20"
+                android:paddingRight="@dimen/margin_20">
+
+                <TextView
+                    android:id="@+id/tv_card_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="华夏银行"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_12"/>
+
+                <TextView
+                    android:id="@+id/tv_card_weihao"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@+id/tv_card_name"
+                    android:background="@null"
+                    android:maxLength="16"
+                    android:maxLines="1"
+                    android:text="尾号5100"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_12"/>
+
+                <TextView
+                    android:id="@+id/tv_card_type"
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@+id/tv_card_weihao"
+
+                    android:background="@drawable/shape_5r_org"
+                    android:maxLength="16"
+                    android:maxLines="1"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:text="信用卡"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_12"/>
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/margin_20"
+                android:paddingRight="@dimen/margin_20">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="真实姓名"
+                    android:textColor="@color/black"
+                   
+                    android:textSize="@dimen/text_14"/>
+
+                <EditText
+                    android:id="@+id/et_code"
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="70dp"
+                    android:background="@null"
+                    android:hint="您的真实姓名"
+                    android:maxLength="10"
+                    android:textSize="@dimen/text_14"/>
+
+                <ImageView
+                    
+                    android:id="@+id/iv_tip_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:src="@drawable/tip"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/margin_20"
+                android:paddingRight="@dimen/margin_20">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="身份证号"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_14"/>
+
+                <EditText
+                    android:id="@+id/et_shenfenzhegn"
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="70dp"
+                    android:background="@null"
+                    android:hint="15或18位身份证号"
+                    android:maxLength="18"
+                    android:maxLines="1"
+                    android:inputType="number"
+                    android:textSize="@dimen/text_14"/>
+
+             
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/margin_20"
+                android:paddingRight="@dimen/margin_20">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="手机号码"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_14"/>
+
+                <EditText
+                    android:id="@+id/et_iphone"
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="70dp"
+                    android:background="@null"
+                    android:hint="银行预留的手机号"
+                    android:maxLength="11"
+                    android:maxLines="1"
+                    android:inputType="number"
+                    android:textSize="@dimen/text_14"/>
+
+                <ImageView
+                    android:id="@+id/iv_tip_phone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:src="@drawable/tip"/>
+
+            </RelativeLayout>
+            
+            <RelativeLayout
+                android:layout_margin="@dimen/margin_20"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:text="继续即代表同意"
+                    android:textSize="@dimen/text_12"
+                    android:layout_height="wrap_content"/>
+                <TextView
+                    android:layout_marginLeft="100dp"
+                    android:layout_width="wrap_content"
+                    android:text="赋汇通用户协议>"
+                    android:textColor="@color/orange_17527"
+                    android:textSize="@dimen/text_12"
+                    android:layout_height="wrap_content"/>
+            </RelativeLayout>
+         
+
+            <Button
+
+                android:id="@+id/btn_ok"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginLeft="@dimen/margin_20"
+                android:layout_marginRight="@dimen/margin_20"
+                android:layout_marginTop="21dp"
+                android:background="@drawable/btn_selected"
+                android:enabled="false"
+                android:text="下一步"
+                android:textColor="@color/white"
+                android:textSize="18dp"/>
+        </LinearLayout>
+    </ScrollView>
+
+
+</RelativeLayout>

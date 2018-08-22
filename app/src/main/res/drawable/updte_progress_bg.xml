@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="#ffffff"/><!--填充颜色-->
+    <!--corners表示圆角,但是bottomleftradius是右下角，反着的-->
+    <corners
+        android:radius="@dimen/x_10"/>
+</shape>

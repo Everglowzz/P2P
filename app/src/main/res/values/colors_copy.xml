@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+   
+    <color name="light_gray">#F0F0F0</color>
+    <color name="gray_979797">#979797</color>
+    <color name="gray_999999">#999999</color>
+    <color name="textclorehui">#bababa</color>
+    <color name="textcloreblack">#3C3C3C</color>
+    <color name="windowBackground">#f4f4f4</color>
+    <color name="textColor">#ffffff</color>
+    <!--白色-->
+    <color name="bg_buttom">#f5f5f5</color>
+    <color name="white">#ffffff</color>
+    <color name="white_F7F7F7">#F7F7F7</color>
+    <color name="white_bababa">#bababa</color>
+    <color name="white_E1E1E1">#E1E1E1</color>
+    <color name="white_8a8a8a">#8a8a8a</color>
+    <color name="white_F5F5F5">#F5F5F5</color>
+    <color name="white_bbbbbb">#bbbbbb</color>
+    <color name="textcolorqianhuiblack">#A0A0A0</color>
+    <color name="color_d2d2d2">#d2d2d2</color>
+    <color name="bbbbbb">#f5f5f5</color>
+    <!--黑色-->
+    <color name="black_A0A0A0">#A0A0A0</color>
+    <color name="black">#dd000000</color>
+    <color name="black_aa">#aa000000</color>
+    <color name="gray_ym_gouwu">#82888e</color>
+    <color name="black_ym">#3a3c3e</color>
+    <color name="black_3C3C3C">#3c3c3c</color>
+    <color name="black_4c5861">#4c5861</color>
+    <color name="black_959595">#959595</color>
+    <color name="hometextgray">#bababa</color>
+    <color name="all_back">#F5F5F5</color>
+    <color name="brunette_4c5861">#4c5861</color>
+    <color name="transparent">#00000000</color>
+    <color name="_969696">#969696</color>
+    <color name="guoqi">#f5f5f5</color>
+    <!--蓝色-->
+    <color name="blue_3F51B5">#3F51B5</color>
+    <color name="blue_303F9F">#303F9F</color>
+    <color name="blue_2BB5FF">#2BB5FF</color>
+    <color name="blue_009">#009</color>
+    <color name="blue_ym">#57a3fa</color>
+
+
+
+    <!--红色-->
+    <color name="red_FF4081">#FF4081</color>
+    <color name="red_D01F00">#D01F00</color>
+    <color name="red_f51600">#f51600</color>
+    <color name="orange_ef710a">#ef710a</color>
+    <color name="orange_ym">#ff8d50</color>
+    <color name="greesn_67A606">#67A606</color>
+    <color name="greesn_ym1">#45a44b</color>
+    <color name="orange_17527">#f17527</color>
+    <color name="orange_f9860a">#f9860a</color>
+    <color name="orange">#f9b441</color>
+    <color name="gray_8a8a8a">#8a8a8a</color>
+    <color name="gray_ym">#f5f5f5</color>
+    <color name="red_ee">#EE4187</color>
+    <color name="yellow1">#FAF2AE</color>
+    <color name="yellow2">#fffece</color>
+    <color name="green_yimu">#4fb556</color>
+    //标题栏背景颜色
+    <color name="main_title_background">#5c8af5</color>
+    //标题栏字体颜色
+    <color name="main_title_text_color">#fbfbfb</color>
+    <color name="color_bg">#F0F0F0</color>
+    <color name="color_wai">#eeeeee</color>
+</resources>

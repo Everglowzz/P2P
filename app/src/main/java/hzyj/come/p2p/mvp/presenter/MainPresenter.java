@@ -38,4 +38,8 @@ public class MainPresenter extends BasePresenter<MainContract.Model, MainContrac
         this.mImageLoader = null;
         this.mApplication = null;
     }
+
+    public void exit() {
+        mAppManager.appExit();
+    }
 }

@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/color_bg"
+              android:orientation="vertical">
+
+    <include
+        layout="@layout/toolbar"
+        />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/ll_image"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y_200"
+                android:background="@color/white"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingRight="@dimen/padding">
+
+                <TextView
+                    style="@style/person_information_left"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="头像"/>
+
+                <hzyj.come.p2p.copy.CircleImageView
+                    android:id="@+id/information_image"
+                    android:layout_width="@dimen/x_150"
+                    android:layout_height="@dimen/x_150"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/padding"
+                    android:layout_marginRight="@dimen/padding"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ym_weidenglu"/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ym_fanhui"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_nickname"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/x_100"
+                android:layout_marginTop="@dimen/x_2"
+                android:background="@color/white"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingRight="@dimen/padding">
+
+                <TextView
+                    style="@style/person_information_left"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="昵称"/>
+
+                <TextView
+                    android:id="@+id/information_nickname"
+                    style="@style/person_information_right"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ym_fanhui"/>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/ll_sex"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/x_100"
+                android:layout_marginTop="@dimen/x_2"
+                android:background="@color/white"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingRight="@dimen/padding">
+
+                <TextView
+                    style="@style/person_information_left"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="性别"/>
+
+                <TextView
+                    android:id="@+id/information_sex"
+                    style="@style/person_information_right"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ym_fanhui"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_phone"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/x_100"
+                android:layout_marginTop="@dimen/x_2"
+                android:background="@color/white"
+                android:gravity="center"
+
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/person_information_left"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="绑定手机号"/>
+
+                <TextView
+                    android:id="@+id/tv_phone"
+                    android:textColor="@color/gray_979797"
+                    style="@style/person_information_right"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    />
+                
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

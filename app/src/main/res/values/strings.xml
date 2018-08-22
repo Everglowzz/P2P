@@ -4,11 +4,42 @@
     <string name="title_notifications">Notifications</string>
 
 
-
     <string name="title_pay">支付</string>
     <string name="title_empty"></string>
     <string name="title_shop">商城</string>
     <string name="title_projects">项目</string>
     <string name="title_discover">发现</string>
     <string name="title_mine">我的</string>
+
+    <string name="hint_login_username">请输入账号</string>
+    <string name="hint_login_password">请输入密码</string>
+    <string name="hint_login_password2">请确认密码</string>
+    <string name="hint_binding_phone">请输入绑定的手机号</string>
+    <string name="login">登录</string>
+    <string name="register">注册</string>
+    <string name="affirm">确认</string>
+    <string name="login_forget_pwd">忘记密码</string>
+    <string name="please_input_limit_pwd">请输入数字或字母</string>
+    <string name="register_input_empty">输入的信息不能为空！</string>
+    <string name="register_input_illegality1">输入的账号不合法！</string>
+    <string name="register_input_illegality2">输入的密码不合法！</string>
+    <string name="register_input_illegality3">两次输入的密码不同！</string>
+
+
+    <string name="no_internet">无网络连接</string>
+    <string name="http_exception">服务器异常</string>
+    <string name="server_connect_time_out">服务器连接超时</string>
+    <string name="generic_error">网络异常,请稍后再试</string>
+    <string name="server_data_error">服务器数据错误</string>
+
+    <string name="please_press_to_exit">再按一次退出程序</string>
+
+    <string name="cancel">取消</string>
+    <string name="determine">确定</string>
+    <string name="fenqi1">不分期\n免手续费</string>
+    <string name="fenqi2">分3期\n0.06%手续费</string>
+    <string name="fenqi3">分6期\n0.055%手续费</string>
+    <string name="fenqi4">分12期\n0.05%手续费</string>
+   
+
 </resources>

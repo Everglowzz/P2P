@@ -1,0 +1,42 @@
+[
+    {
+        "merged": "E:\\MyDownloads\\Download\\aip-ocr-android-sdk-1.4.3\\OCRDemo\\ocr_ui\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\abc_slide_out_top.xml",
+        "source": "C:\\Users\\my\\.android\\build-cache\\f24620b78aa8979e64d6c0320b058a2382d8338c\\output\\res\\anim\\abc_slide_out_top.xml"
+    },
+    {
+        "merged": "E:\\MyDownloads\\Download\\aip-ocr-android-sdk-1.4.3\\OCRDemo\\ocr_ui\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\abc_fade_in.xml",
+        "source": "C:\\Users\\my\\.android\\build-cache\\f24620b78aa8979e64d6c0320b058a2382d8338c\\output\\res\\anim\\abc_fade_in.xml"
+    },
+    {
+        "merged": "E:\\MyDownloads\\Download\\aip-ocr-android-sdk-1.4.3\\OCRDemo\\ocr_ui\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\abc_popup_exit.xml",
+        "source": "C:\\Users\\my\\.android\\build-cache\\f24620b78aa8979e64d6c0320b058a2382d8338c\\output\\res\\anim\\abc_popup_exit.xml"
+    },
+    {
+        "merged": "E:\\MyDownloads\\Download\\aip-ocr-android-sdk-1.4.3\\OCRDemo\\ocr_ui\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\abc_slide_in_top.xml",
+        "source": "C:\\Users\\my\\.android\\build-cache\\f24620b78aa8979e64d6c0320b058a2382d8338c\\output\\res\\anim\\abc_slide_in_top.xml"
+    },
+    {
+        "merged": "E:\\MyDownloads\\Download\\aip-ocr-android-sdk-1.4.3\\OCRDemo\\ocr_ui\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\abc_fade_out.xml",
+        "source": "C:\\Users\\my\\.android\\build-cache\\f24620b78aa8979e64d6c0320b058a2382d8338c\\output\\res\\anim\\abc_fade_out.xml"
+    },
+    {
+        "merged": "E:\\MyDownloads\\Download\\aip-ocr-android-sdk-1.4.3\\OCRDemo\\ocr_ui\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\abc_slide_in_bottom.xml",
+        "source": "C:\\Users\\my\\.android\\build-cache\\f24620b78aa8979e64d6c0320b058a2382d8338c\\output\\res\\anim\\abc_slide_in_bottom.xml"
+    },
+    {
+        "merged": "E:\\MyDownloads\\Download\\aip-ocr-android-sdk-1.4.3\\OCRDemo\\ocr_ui\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\abc_slide_out_bottom.xml",
+        "source": "C:\\Users\\my\\.android\\build-cache\\f24620b78aa8979e64d6c0320b058a2382d8338c\\output\\res\\anim\\abc_slide_out_bottom.xml"
+    },
+    {
+        "merged": "E:\\MyDownloads\\Download\\aip-ocr-android-sdk-1.4.3\\OCRDemo\\ocr_ui\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\abc_grow_fade_in_from_bottom.xml",
+        "source": "C:\\Users\\my\\.android\\build-cache\\f24620b78aa8979e64d6c0320b058a2382d8338c\\output\\res\\anim\\abc_grow_fade_in_from_bottom.xml"
+    },
+    {
+        "merged": "E:\\MyDownloads\\Download\\aip-ocr-android-sdk-1.4.3\\OCRDemo\\ocr_ui\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\abc_shrink_fade_out_from_bottom.xml",
+        "source": "C:\\Users\\my\\.android\\build-cache\\f24620b78aa8979e64d6c0320b058a2382d8338c\\output\\res\\anim\\abc_shrink_fade_out_from_bottom.xml"
+    },
+    {
+        "merged": "E:\\MyDownloads\\Download\\aip-ocr-android-sdk-1.4.3\\OCRDemo\\ocr_ui\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\abc_popup_enter.xml",
+        "source": "C:\\Users\\my\\.android\\build-cache\\f24620b78aa8979e64d6c0320b058a2382d8338c\\output\\res\\anim\\abc_popup_enter.xml"
+    }
+]

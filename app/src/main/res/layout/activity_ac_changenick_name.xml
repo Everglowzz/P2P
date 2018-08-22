@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/color_bg"
+              android:orientation="vertical">
+
+    <include layout="@layout/toolbar"/>
+
+    <EditText
+        android:id="@+id/nick_name"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x_100"
+        android:background="@color/white"
+        android:hint="请输入昵称"
+        android:inputType="text"
+        android:maxLength="20"
+        android:paddingLeft="@dimen/padding"
+        android:paddingRight="@dimen/padding"
+        android:textSize="@dimen/text_14"
+        android:textColor="@color/gray_979797"
+        android:layout_marginTop="@dimen/x_100"/>
+    <TextView
+        android:id="@+id/tv_submit"
+        android:layout_width="match_parent"
+        android:background="@drawable/login_shape"
+        android:layout_marginLeft="@dimen/padding"
+        android:layout_marginRight="@dimen/padding"
+        android:layout_marginTop="@dimen/y_230"
+        android:text="确认修改"
+        android:gravity="center"
+        android:textSize="@dimen/text_16"
+        android:textColor="@color/white"
+        android:layout_height="@dimen/y_100"/>
+</LinearLayout>

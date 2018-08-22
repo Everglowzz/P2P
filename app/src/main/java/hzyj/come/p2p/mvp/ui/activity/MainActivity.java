@@ -5,7 +5,9 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.support.v4.view.GravityCompat;
 import android.support.v7.widget.Toolbar;
+import android.view.KeyEvent;
 import android.view.View;
 import android.widget.FrameLayout;
 import android.widget.RelativeLayout;
@@ -13,24 +15,27 @@ import android.widget.TextView;
 
 import com.jess.arms.base.BaseActivity;
 import com.jess.arms.di.component.AppComponent;
+import com.jess.arms.integration.AppManager;
 import com.jess.arms.utils.ArmsUtils;
 import com.roughike.bottombar.BottomBar;
 import com.roughike.bottombar.OnTabSelectListener;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Timer;
+import java.util.TimerTask;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import hzyj.come.p2p.R;
 import hzyj.come.p2p.app.utils.FragmentUtils;
+import hzyj.come.p2p.app.utils.ToastUtil;
 import hzyj.come.p2p.di.component.DaggerMainComponent;
 import hzyj.come.p2p.di.module.MainModule;
 import hzyj.come.p2p.mvp.contract.MainContract;
 import hzyj.come.p2p.mvp.presenter.MainPresenter;
 import hzyj.come.p2p.mvp.ui.fragment.HomeFragment;
 import hzyj.come.p2p.mvp.ui.fragment.MineFragment;
-import hzyj.come.p2p.mvp.ui.fragment.ShopFragment;
 import hzyj.come.p2p.mvp.ui.fragment.homefragment.MainHomeFragment;
 
 import static com.jess.arms.utils.Preconditions.checkNotNull;
@@ -49,7 +54,7 @@ public class MainActivity extends BaseActivity<MainPresenter> implements MainCon
     FrameLayout mMainFrame;
     @BindView(R.id.bottomBar)
     BottomBar mBottomBar;
-    private List<Integer> mTitles;   
+    private List<Integer> mTitles;
     private List<Fragment> mFragments;
     private int mReplace = 1;
 
@@ -68,7 +73,7 @@ public class MainActivity extends BaseActivity<MainPresenter> implements MainCon
         mToolbarTitle.setText(mTitles.get(mReplace));
         FragmentUtils.hideAllShowFragment(mFragments.get(mReplace));
     };
-    
+
     @Override
     public void setupActivityComponent(@NonNull AppComponent appComponent) {
         DaggerMainComponent //如找不到该类,请编译一下项目
@@ -100,12 +105,12 @@ public class MainActivity extends BaseActivity<MainPresenter> implements MainCon
             homeFragment = HomeFragment.newInstance();
             mainHomeFragment = MainHomeFragment.newInstance();
             mineFragment = MineFragment.newInstance();
-        }else{
+        } else {
             mReplace = savedInstanceState.getInt(ACTIVITY_FRAGMENT_REPLACE);
             android.support.v4.app.FragmentManager fm = getSupportFragmentManager();
-            homeFragment= (HomeFragment) FragmentUtils.findFragment(fm,HomeFragment.class);
-            mainHomeFragment= (MainHomeFragment) FragmentUtils.findFragment(fm,MainHomeFragment.class);
-            mineFragment= (MineFragment) FragmentUtils.findFragment(fm,MineFragment.class);
+            homeFragment = (HomeFragment) FragmentUtils.findFragment(fm, HomeFragment.class);
+            mainHomeFragment = (MainHomeFragment) FragmentUtils.findFragment(fm, MainHomeFragment.class);
+            mineFragment = (MineFragment) FragmentUtils.findFragment(fm, MineFragment.class);
 
         }
         if (mFragments == null) {
@@ -116,7 +121,7 @@ public class MainActivity extends BaseActivity<MainPresenter> implements MainCon
         }
         FragmentUtils.addFragments(getSupportFragmentManager(), mFragments, R.id.main_frame, 0);
         mBottomBar.setOnTabSelectListener(mOnTabSelectListener);
-        
+
     }
 
     @Override
@@ -152,4 +157,33 @@ public class MainActivity extends BaseActivity<MainPresenter> implements MainCon
         // TODO: add setContentView(...) invocation
         ButterKnife.bind(this);
     }
+
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        if (keyCode == KeyEvent.KEYCODE_BACK) {
+            exitBy2Click();
+        }
+        return false;
+    }
+
+    private static Boolean isExit = false;
+
+    private void exitBy2Click() {
+        
+        if (!isExit) {
+            isExit = true;
+            ToastUtil.showMessage(getString(R.string.please_press_to_exit));
+            Timer tExit = new Timer();
+            tExit.schedule(new TimerTask() {
+                @Override
+                public void run() {
+                    isExit = false;
+                }
+            }, 2000);
+        } else {
+            mPresenter.exit();
+        }
+            
+    }
+    
 }

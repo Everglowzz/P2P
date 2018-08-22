@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:background="@drawable/updte_progress_bg"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="@dimen/x_600"
+        android:layout_height="wrap_content"
+        android:minHeight="@dimen/x_200"
+        android:orientation="vertical"
+        android:padding="@dimen/x_20">
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_14" />
+
+        <ListView
+            android:id="@+id/lv_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:divider="@color/gray_979797"
+            android:dividerHeight="0.3dp"
+            android:layout_marginBottom="@dimen/dim20"
+            android:layout_marginTop="@dimen/x_20" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dim70"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_cancel"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:textColor="@color/colorPrimary"
+                android:background="@drawable/selector_backgroundreversal"
+                android:gravity="center"
+                android:text="@string/cancel" />
+
+            <TextView
+                android:id="@+id/tv_confirm"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/dim30"
+                android:layout_weight="1"
+                android:textColor="@color/colorPrimary"
+                android:background="@drawable/selector_backgroundreversal"
+                android:gravity="center"
+                android:text="@string/determine" />
+
+
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

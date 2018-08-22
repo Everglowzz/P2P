@@ -1,1 +1,1 @@
-include ':app',':common'
+include ':app',':common',':zxinglibrary',':ocr_ui'
