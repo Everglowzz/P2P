@@ -50,17 +50,17 @@
         <activity android:name=".copy.AcChangenickName"/>
         <activity android:name=".copy.SelectPayActivity">
         </activity>
-        <activity android:name=".copy.CardManngeActivity"/>
-        <activity android:name=".copy.AddCardActivity"/>
-        <activity android:name=".copy.CardInfoActivity"/>
+        <activity android:name=".copy.bankcard.CardManngeActivity"/>
+        <activity android:name=".copy.bankcard.AddCardActivity"/>
+        <activity android:name=".copy.bankcard.CardInfoActivity"/>
         <activity android:name=".copy.InputCodeActivity"/>
         <activity android:name=".copy.CertificationActivity"/>
         <activity android:name=".copy.credit.CreditFenqiActivity"/>
         <activity android:name=".copy.credit.FenqiInfoActivity"/>
         <activity android:name=".copy.credit.KuaijiePayActivity"/>
         <activity android:name=".copy.SettingActivity"/>
-        <activity android:name=".copy.dialog.AcAddressList"/>
-        <activity android:name=".copy.dialog.AcAddAddressActivity"/>
+        <activity android:name=".copy.address.AcAddressList"/>
+        <activity android:name=".copy.address.AcAddAddressActivity"/>
     </application>
 
 </manifest>

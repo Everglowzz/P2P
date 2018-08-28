@@ -18,7 +18,6 @@ import butterknife.ButterKnife;
 import butterknife.OnClick;
 import hzyj.come.p2p.R;
 import hzyj.come.p2p.copy.BaseActivity;
-import hzyj.come.p2p.copy.CardInfoActivity;
 import me.shihao.library.XRadioGroup;
 
 public class CreditFenqiActivity extends BaseActivity {

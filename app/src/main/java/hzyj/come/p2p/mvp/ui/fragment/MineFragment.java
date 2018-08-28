@@ -10,7 +10,6 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
-import com.j256.ormlite.logger.Log;
 import com.jess.arms.di.component.AppComponent;
 
 import butterknife.BindView;
@@ -23,10 +22,10 @@ import hzyj.come.p2p.app.MyApplication;
 import hzyj.come.p2p.app.https.config.CommonPreferences;
 import hzyj.come.p2p.base.BaseFragment;
 import hzyj.come.p2p.copy.AcUserInfo;
-import hzyj.come.p2p.copy.CardManngeActivity;
+import hzyj.come.p2p.copy.bankcard.CardManngeActivity;
 import hzyj.come.p2p.copy.CertificationActivity;
 import hzyj.come.p2p.copy.SettingActivity;
-import hzyj.come.p2p.copy.dialog.AcAddressList;
+import hzyj.come.p2p.copy.address.AcAddressList;
 import hzyj.come.p2p.entity.EntitiyUser;
 import hzyj.come.p2p.mvp.ui.widget.GroupViewItem;
 

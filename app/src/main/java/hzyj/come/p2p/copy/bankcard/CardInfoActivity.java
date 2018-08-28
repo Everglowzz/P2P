@@ -1,4 +1,4 @@
-package hzyj.come.p2p.copy;
+package hzyj.come.p2p.copy.bankcard;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -16,6 +16,8 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 import hzyj.come.p2p.R;
+import hzyj.come.p2p.copy.BaseActivity;
+import hzyj.come.p2p.copy.InputCodeActivity;
 
 public class CardInfoActivity extends BaseActivity {
 

@@ -1,4 +1,4 @@
-package hzyj.come.p2p.copy.dialog;
+package hzyj.come.p2p.copy.address;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -14,7 +14,6 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import java.util.HashMap;
-import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -24,7 +23,6 @@ import hzyj.come.p2p.app.https.config.NetWorkConstant;
 import hzyj.come.p2p.app.utils.ToastUtil;
 import hzyj.come.p2p.copy.BaseActivity;
 import hzyj.come.p2p.copy.CommonAdapter;
-import hzyj.come.p2p.entity.BaseBean;
 import hzyj.come.p2p.entity.EntityBase;
 import hzyj.come.p2p.entity.appShippingAddress;
 import hzyj.come.p2p.global.Constants;

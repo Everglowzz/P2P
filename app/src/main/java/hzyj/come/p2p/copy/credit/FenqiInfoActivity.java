@@ -1,12 +1,8 @@
 package hzyj.come.p2p.copy.credit;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.support.v7.widget.Toolbar;
-import android.text.Editable;
-import android.text.TextUtils;
-import android.text.TextWatcher;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -20,8 +16,6 @@ import hzyj.come.p2p.R;
 import hzyj.come.p2p.app.utils.ToastUtil;
 import hzyj.come.p2p.app.utils.Tools;
 import hzyj.come.p2p.copy.BaseActivity;
-import hzyj.come.p2p.copy.CardInfoActivity;
-import me.shihao.library.XRadioGroup;
 
 public class FenqiInfoActivity extends BaseActivity {
 

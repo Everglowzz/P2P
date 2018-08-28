@@ -1,4 +1,4 @@
-package hzyj.come.p2p.copy.dialog;
+package hzyj.come.p2p.copy.address;
 
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
