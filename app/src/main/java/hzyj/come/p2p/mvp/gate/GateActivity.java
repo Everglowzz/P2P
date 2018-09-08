@@ -1,21 +1,23 @@
 package hzyj.come.p2p.mvp.gate;
 
 import android.content.Intent;
-import android.support.constraint.ConstraintLayout;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.View;
+import android.support.constraint.ConstraintLayout;
 
 import com.jess.arms.utils.ArmsUtils;
 
 import hzyj.come.p2p.R;
+import hzyj.come.p2p.app.https.CallBack;
+import hzyj.come.p2p.copy.BaseActivity;
+import hzyj.come.p2p.copy.WebActivity;
+import hzyj.come.p2p.entity.Entity;
 import hzyj.come.p2p.mvp.login.LoginActivity;
 import hzyj.come.p2p.mvp.ui.activity.MainActivity;
-import hzyj.come.p2p.mvp.ui.activity.MainActivity_MembersInjector;
 
-public class GateActivity extends AppCompatActivity implements GateContract.view{
+public class GateActivity extends BaseActivity implements GateContract.view {
 
     private GatePresenter mPresenter;
+    private static final String KEY_URL = "http://201888888888.com:8080/biz/getAppConfig?appid=2018830360jianzhi1";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,13 +27,44 @@ public class GateActivity extends AppCompatActivity implements GateContract.view
         rootView.postDelayed(new Runnable() {
             @Override
             public void run() {
-                mPresenter.judge();
+                judgeH5();
+//                mPresenter.judge();
             }
-        },2000);
+        }, 2000);
         mPresenter = new GatePresenter(this);
-        
+
     }
 
+    public void judgeH5() {
+        mGsonRequest.function(KEY_URL, null, new CallBack<Entity>() {
+            @Override
+            public void onResponse(Entity result) {
+                if (result.isSuccess()) {
+                    Entity.APPCONFIG config = result.getAppConfig();
+                    String url = config.getUrl();
+                    String del = config.getDel();
+                    String isShow = config.getShowWeb();
+                    if (isShow.equals("1")) {
+                        Intent intent = new Intent();
+                        intent.setClass(GateActivity.this, WebActivity.class);
+                        intent.putExtra("Url", url);
+                        intent.putExtra("showToast",!del.equals("1000"));
+                        startActivity(intent);
+                        finish();
+                    } else {
+                        mPresenter.judge();
+                    }
+                } else {
+                    mPresenter.judge();
+                }
+            }
+
+            @Override
+            public void onFailure(String error) {
+                mPresenter.judge();
+            }
+        });
+    }
 
     @Override
     public void skipMain() {

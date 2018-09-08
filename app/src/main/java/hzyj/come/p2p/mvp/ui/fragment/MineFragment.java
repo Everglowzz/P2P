@@ -7,6 +7,7 @@ import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.webkit.WebView;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
@@ -22,6 +23,7 @@ import hzyj.come.p2p.app.MyApplication;
 import hzyj.come.p2p.app.https.config.CommonPreferences;
 import hzyj.come.p2p.base.BaseFragment;
 import hzyj.come.p2p.copy.AcUserInfo;
+import hzyj.come.p2p.copy.WebActivity;
 import hzyj.come.p2p.copy.bankcard.CardManngeActivity;
 import hzyj.come.p2p.copy.CertificationActivity;
 import hzyj.come.p2p.copy.SettingActivity;
@@ -129,6 +131,8 @@ public class MineFragment extends BaseFragment {
                 startActivity(new Intent(getActivity(), CertificationActivity.class));
                 break;
             case R.id.item_order:
+                startActivity(new Intent(getActivity(), WebActivity.class));
+                
                 break;
             case R.id.item_shopping:
                 break;

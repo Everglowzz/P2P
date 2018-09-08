@@ -45,8 +45,10 @@ public class RegisterPresenter extends BasePresenter<RegisterContract.Model, Reg
         } else if (!passWord.equals(pwd2)) {
             mRootView.showMessage(MyApplication.APP.getResources().getString(R.string.register_input_illegality3));
         } else {
-            HashMap<String, String> map = new HashMap<>();
-            map.put(NetWorkConstant.appUserAccount, account);
+            mRootView.killMyself();
+            
+         /*    HashMap<String, String> map = new HashMap<>();
+           map.put(NetWorkConstant.appUserAccount, account);
             map.put(NetWorkConstant.appPassword, Tools.md5(Tools.md5(pwd2) + "fht"));
 
             mGsonRequest.function(NetWorkConstant.app_user_regist, map, EntityBase.class, new CallBack<EntityBase>() {
@@ -62,7 +64,7 @@ public class RegisterPresenter extends BasePresenter<RegisterContract.Model, Reg
                 public void onFailure(String error) {
                     mRootView.showMessage(error);
                 }
-            });
+            });*/
         }
 
     }

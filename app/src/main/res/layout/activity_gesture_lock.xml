@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#ffffff"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:padding="50dp">
+        <TextView
+            android:textColor="#434242"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:text="绘制图案"
+            android:paddingBottom="10dp"/>
+        <com.gestruelock.IndicatorLockView
+            android:id="@+id/lockviewIndicator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:indicator_selected="@drawable/indicator_selected"
+            app:indicator_unselected="@drawable/indicator_unselected"
+            android:layout_gravity="center_horizontal"/>
+
+        <TextView
+            android:id="@+id/tvMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:text=""
+            android:paddingTop="20dp"
+            />
+
+        <RelativeLayout
+            android:id="@+id/rl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="30dp"
+            >
+
+            <com.gestruelock.ExpandLockView
+                android:id="@+id/lockviewExpand"
+                android:layout_width="280dp"
+                android:layout_height="280dp"
+                app:lock_selected1="@drawable/gusture_icon_left"
+                app:lock_selected2="@drawable/gusture_icon_center"
+                app:lock_selected3="@drawable/gusture_icon_right"
+                app:lock_trackColor="#ff0432"
+                app:lock_selected_error="@drawable/circle_error"
+                app:lock_unselected="@drawable/gusture_icon_default"
+                android:layout_gravity="center_horizontal"/>
+
+        </RelativeLayout>
+    </LinearLayout>
+</RelativeLayout>

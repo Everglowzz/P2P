@@ -3,8 +3,8 @@
           package="hzyj.come.p2p">
 
     <uses-permission android:name="android.permission.INTERNET"/>
-    <!--<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>-->
-    <!--<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>-->
+    <!-- <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/> -->
+    <!-- <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/> -->
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
     <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
@@ -22,7 +22,6 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".mvp.ui.activity.MainActivity">
-           
         </activity>
 
         <meta-data
@@ -33,7 +32,6 @@
             android:value="1280"/>
 
         <activity android:name=".mvp.login.LoginActivity">
-           
         </activity>
         <activity android:name=".mvp.register.RegisterActivity"/>
         <activity android:name=".mvp.forgetpwd.ForgetpwdActivity"/>
@@ -61,6 +59,12 @@
         <activity android:name=".copy.SettingActivity"/>
         <activity android:name=".copy.address.AcAddressList"/>
         <activity android:name=".copy.address.AcAddAddressActivity"/>
+        <activity android:name=".copy.SafetyActivity">
+        </activity>
+        <activity android:name=".copy.GestureLockActivity">
+        </activity>
+        <activity android:name=".copy.WebActivity">
+        </activity>
     </application>
 
 </manifest>

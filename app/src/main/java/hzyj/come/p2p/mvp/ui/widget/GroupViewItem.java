@@ -2,6 +2,7 @@ package hzyj.come.p2p.mvp.ui.widget;
 
 import android.content.Context;
 import android.content.res.TypedArray;
+import android.graphics.drawable.Drawable;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.view.ViewGroup;
@@ -11,6 +12,7 @@ import android.widget.TextView;
 
 import com.zhy.autolayout.AutoRelativeLayout;
 
+import butterknife.OnClick;
 import hzyj.come.p2p.R;
 
 /**
@@ -25,6 +27,7 @@ public class GroupViewItem extends AutoRelativeLayout {
     private boolean mIsShowleft;
     private boolean mIsShowRight;
     private RelativeLayout mRootView;
+    private ImageView mIvRight;
 
     public GroupViewItem(Context context) {
         super(context);
@@ -51,7 +54,7 @@ public class GroupViewItem extends AutoRelativeLayout {
         mRootView = findViewById(R.id.layout_root);
         mRootView.setLayoutParams(new RelativeLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, (int) mItemHeight));
         ImageView ivLeft = findViewById(R.id.iv_left);
-        ImageView ivRight = findViewById(R.id.iv_right);
+        mIvRight = findViewById(R.id.iv_right);
         TextView itemTitle = findViewById(R.id.tv_title);
         TextView rightText = findViewById(R.id.tv_right_text);
         if (mIsShowleft) {
@@ -61,17 +64,20 @@ public class GroupViewItem extends AutoRelativeLayout {
             ivLeft.setVisibility(GONE);
         }
         if (mIsShowRight) {
-            ivRight.setVisibility(VISIBLE);
-            ivRight.setImageResource(mRightImage);
+            mIvRight.setVisibility(VISIBLE);
+            mIvRight.setImageResource(mRightImage);
         } else {
-            ivRight.setVisibility(GONE);
+            mIvRight.setVisibility(GONE);
         }
         itemTitle.setText(mItemTitle);
 
     }
 
     private void setOnItemClickListener(OnClickListener listener) {
-        mRootView.setOnClickListener(listener);
+        if (mRootView != null) {
+            mRootView.setOnClickListener(listener);
+        }
+       
     }
 
     private void initTypedArray(Context context, AttributeSet attrs) {
@@ -83,5 +89,16 @@ public class GroupViewItem extends AutoRelativeLayout {
         mIsShowleft = typedArray.getBoolean(R.styleable.GroupViewItem_isShowLeft, true);
         mIsShowRight = typedArray.getBoolean(R.styleable.GroupViewItem_isShowRight, true);
 
+    }
+    
+    public void setRightImageClickListener(OnClickListener listener){
+        if (mIvRight != null) {
+            mIvRight.setOnClickListener(listener);
+        }
+    }
+    public void setRightImage(Drawable drawable){
+        if (mIvRight != null) {
+            mIvRight.setImageDrawable(drawable);
+        }
     }
 }

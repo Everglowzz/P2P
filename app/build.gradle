@@ -9,7 +9,19 @@ android {
     compileSdkVersion rootProject.ext.android["compileSdkVersion"]
     buildToolsVersion rootProject.ext.android["buildToolsVersion"]
     useLibrary 'org.apache.http.legacy'
+    signingConfigs {
+        release {
+            keyAlias 'android'
+            keyPassword 'fht123'
+            storeFile file('pos.jks')
+            storePassword 'fht123'
+        }
+    }
 
+    dexOptions {
+        incremental true
+        javaMaxHeapSize "4g"
+    }
     compileOptions {
         targetCompatibility JavaVersion.VERSION_1_8
         sourceCompatibility JavaVersion.VERSION_1_8
@@ -27,19 +39,24 @@ android {
             buildConfigField "boolean", "LOG_DEBUG", "true"
             buildConfigField "boolean", "USE_CANARY", "true"
             minifyEnabled false
+            signingConfig signingConfigs.release
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
 
         release {
             buildConfigField "boolean", "LOG_DEBUG", "false"
             buildConfigField "boolean", "USE_CANARY", "false"
-            minifyEnabled true
-            shrinkResources true
-            zipAlignEnabled true
+            minifyEnabled false
+
+            signingConfig signingConfigs.release
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
-
+    lintOptions {
+        quiet true
+        ignoreWarnings true
+        abortOnError false
+    }
 
 }
 
@@ -67,6 +84,7 @@ dependencies {
     compile 'com.yuyh.imgsel:library:2.0.2'
     compile 'com.android.support:multidex:1.0.1'
     compile 'com.github.fodroid:XRadioGroup:v1.1'
+    implementation 'com.gesturelock:GestureLock:1.0'
     annotationProcessor rootProject.ext.dependencies[
             "butterknife-compiler"]
     //Butterknife 插件,很多人因为没加这个而报错,切记!!!
@@ -76,8 +94,11 @@ dependencies {
     implementation rootProject.ext.dependencies["progressmanager"]
     implementation rootProject.ext.dependencies["retrofit-url-manager"]
     implementation 'de.hdodenhof:circleimageview:2.2.0'
-    compile project(':common')
-    implementation project(':zxinglibrary')
+    //    compile project(':common')
+    //    implementation project(':zxinglibrary')
     implementation files('libs/ocr-sdk.jar')
-    implementation project( ':ocr_ui')
+    //    implementation project(':ocr_ui')
+    implementation project(':common')
+    implementation project(':ocr_ui')
+    implementation project(':zxinglibrary')
 }

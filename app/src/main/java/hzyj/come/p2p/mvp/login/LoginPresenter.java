@@ -40,7 +40,11 @@ public    class LoginPresenter  extends BasePresenter<LoginContract.model,LoginC
         if (TextUtils.isEmpty(account) || TextUtils.isEmpty(pwd)) {
             mRootView.showMessage(MyApplication.APP.getResources().getString(R.string.register_input_empty));
         } else {
-            HashMap<String, String> map = new HashMap<>();
+
+            mRootView.launchActivity(new Intent(MyApplication.APP, MainActivity.class));
+            mRootView.killMyself();
+            
+          /*  HashMap<String, String> map = new HashMap<>();
             map.put(NetWorkConstant.appUserAccount, account);
             map.put("appUserId","11");
             map.put(NetWorkConstant.appPassword, Tools.md5(Tools.md5(pwd) + "fht"));
@@ -61,7 +65,7 @@ public    class LoginPresenter  extends BasePresenter<LoginContract.model,LoginC
                 public void onFailure(String error) {
                     ToastUtil.showMessage(error);
                 }
-            });
+            });*/
         }
     }
 

@@ -1,2 +1,0 @@
-D com/baidu/ocr/ui/camera/ICameraControl$FlashMode
-D com/baidu/ocr/ui/camera/MaskView$MaskType

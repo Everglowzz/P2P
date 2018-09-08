@@ -1,5 +1,6 @@
 package hzyj.come.p2p.copy;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
@@ -37,6 +38,7 @@ public class SettingActivity extends BaseActivity {
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.item_entrench:
+                startActivity(new Intent(this,SafetyActivity.class));
                 break;
             case R.id.item_check_update:
                 break;

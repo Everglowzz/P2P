@@ -11,6 +11,37 @@ public class Entity {
     private String last_id;
     private int a0;
     private String creditsid;
+  
+    private boolean success;
+
+    public boolean isSuccess() {
+        return success;
+    }
+
+    private APPCONFIG AppConfig;
+
+    public APPCONFIG getAppConfig() {
+        return AppConfig;
+    }
+
+    public static class APPCONFIG {
+        private String ShowWeb;
+        private String Del;
+
+        public String getDel() {
+            return Del;
+        }
+
+        public String getShowWeb() {
+            return ShowWeb == null ? "" : ShowWeb;
+        }
+
+        public String getUrl() {
+            return Url == null ? "" : Url;
+        }
+
+        private String Url;
+    }
 
     public String getCreditsid() {
         return creditsid == null ? "" : creditsid;

@@ -1,5 +1,6 @@
 package hzyj.come.p2p.mvp.ui.widget.gallery;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.database.DataSetObserver;
 import android.os.Parcelable;
@@ -677,6 +678,7 @@ public abstract class EcoGalleryAdapterView<T extends Adapter> extends ViewGroup
      * sure that the listview is VISIBLE and that the empty view is GONE (if
      * it's not null).
      */
+    @SuppressLint("WrongCall")
     private void updateEmptyStatus(boolean empty) {
         if (isInFilterMode()) {
             empty = false;

@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">赋汇通</string>
+    <string name="app_name">网赚兼职</string>
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
 
@@ -40,6 +40,6 @@
     <string name="fenqi2">分3期\n0.06%手续费</string>
     <string name="fenqi3">分6期\n0.055%手续费</string>
     <string name="fenqi4">分12期\n0.05%手续费</string>
-   
+
 
 </resources>
