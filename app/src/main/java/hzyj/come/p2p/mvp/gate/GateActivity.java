@@ -27,8 +27,8 @@ public class GateActivity extends BaseActivity implements GateContract.view {
         rootView.postDelayed(new Runnable() {
             @Override
             public void run() {
-                judgeH5();
-//                mPresenter.judge();
+ //               judgeH5();
+                mPresenter.judge();
             }
         }, 2000);
         mPresenter = new GatePresenter(this);
